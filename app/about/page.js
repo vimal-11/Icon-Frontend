@@ -29,7 +29,7 @@ const developers = [
   },
   {
     name: 'Vimalan S',
-    image: '',
+    image: 'vimalan.jpg',
     year: 'IV Year',
     role: '',
     link1: 'https://github.com/laxx1612/',
@@ -128,39 +128,39 @@ const Page = () => (
                       <i className="fas fa-map-marker-alt mr-2 text-white opacity-75"></i>{developer.role}
                     </div>
                   </div>
-                  <div className="flex justify-center lg:pt-4 pt-4 md:pt-8 pb-0 font-sm ">
-                    <div className="p-3 text-center flex justify-content-center align-items-center">
+                  <div className="flex flex-col items-center justify-center lg:flex-row lg:pt-4 pt-4 md:pt-8 pb-0 font-sm">
+                    <div className="p-3 text-center flex justify-center items-center mb-2">
                       <img
                         src="/github.svg"
                         className="w-[20px] md:w-[28px] h-[20px] md:h-[28px] object-contain cursor-pointer"
                       />
                       <a
                         href={developer.link1}
-                        className="text-base md:text-xl font-bold block uppercase tracking-wide text-white font-sm "
+                        className="text-base md:text-xl font-bold block uppercase tracking-wide text-white font-sm mt-2"
                       >
                         Github
                       </a>
                     </div>
-                    <div className="p-3 text-center flex justify-content-center align-items-center">
+                    <div className="p-3 text-center flex justify-center items-center mb-2">
                       <img
                         src="/linkedin.svg"
                         className="w-[18px] md:w-[24px] h-[18px] md:h-[24px] object-contain cursor-pointer"
                       />
                       <a
                         href={developer.link2}
-                        className="text-base md:text-xl font-bold block uppercase tracking-wide text-white font-sm "
+                        className="text-base md:text-xl font-bold block uppercase tracking-wide text-white font-sm mt-2"
                       >
                         Linkedin
                       </a>
                     </div>
-                    <div className="p-3 text-center flex justify-content-center align-items-center">
+                    <div className="p-3 text-center flex justify-center items-center">
                       <img
                         src="/instagram.svg"
                         className="w-[18px] md:w-[24px] h-[18px] md:h-[24px] object-contain cursor-pointer"
                       />
                       <a
                         href={developer.link3}
-                        className="text-base md:text-xl font-bold block uppercase tracking-wide text-white font-sm "
+                        className="text-base md:text-xl font-bold block uppercase tracking-wide text-white font-sm mt-2"
                       >
                         Instagram
                       </a>
