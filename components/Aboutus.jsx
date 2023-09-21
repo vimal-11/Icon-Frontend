@@ -52,7 +52,7 @@ const contributors = [
   {
     name: 'Robin Brito',
     desc: 'M.Tech Representative',
-    image: 'https://imgs.search.brave.com/nxDq4Y2QCtKUw58jQba2-lkzEFNLFqavfrtt1l0rJP4/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzUwLzBk/L2E3LzUwMGRhN2E1/OTlmYThiODQzNTNj/ZjgyNjY3ZGYxMGUz/LmpwZw',
+    image: 'robin.jpg',
     link1: 'www.google.com',
     link2: 'www.github.com',
     link3: '#',
