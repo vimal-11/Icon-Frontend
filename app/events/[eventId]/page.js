@@ -1,4 +1,5 @@
 'use client';
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -9,20 +10,20 @@ const EventDetail = () => {
   const [eventId, setEventId] = useState(null);
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-  const uid = localStorage.getItem("user_id");
-  console.log("user id", uid);
-  const authToken = localStorage.getItem("authToken");
-  console.log("Token:", authToken);
+  const uid = localStorage.getItem('user_id');
+  console.log('user id', uid);
+  const authToken = localStorage.getItem('authToken');
+  console.log('Token:', authToken);
 
   useEffect(() => {
-    const pathParts = window.location.pathname.split('/');  //for fetching event ID from URL 
+    const pathParts = window.location.pathname.split('/'); // for fetching event ID from URL
     const eventIdFromPath = pathParts[pathParts.length - 1];
     setEventId(eventIdFromPath);
 
     const fetchEventDetails = async () => {
       try {
         const response = await axios.get(`http://127.0.0.1:8000/event-detail/${eventIdFromPath}/`);
-        console.log("event details  :", response.data);
+        console.log('event details  :', response.data);
         const eventData = response.data;
         setEvent(eventData);
       } catch (error) {
@@ -55,17 +56,14 @@ const EventDetail = () => {
       if (response) {
         setRegistrationSuccess(true);
         setShowSuccessPopup(true);
-        //alert("Registration Successful!") // Show the success pop-up
+        // alert("Registration Successful!") // Show the success pop-up
       }
-
-
     } catch (error) {
       if (error.response.status === 401) {
-        alert("You have already registered for this event."); // Show the success pop-up
-      }
-      else {
+        alert('You have already registered for this event.'); // Show the success pop-up
+      } else {
         console.error('Error registering for the event:', error);
-        alert("Have an ICON profile in order to register for an event. Create a profile and continue.");
+        alert('Have an ICON profile in order to register for an event. Create a profile and continue.');
       }
     }
   };
@@ -108,7 +106,7 @@ const EventDetail = () => {
                 <p className="text-lg py-2">Date : {event.date}</p>
                 <p className="text-lg py-2">Registration fee : {event.reg_fee}</p>
                 <p className="text-lg py-2">Venue : {event.venue}</p>
-                <div className="text-lg py-5 text-white" dangerouslySetInnerHTML={{ __html: event.rules }}></div>
+                <div className="text-lg py-5 text-white" dangerouslySetInnerHTML={{ __html: event.rules }} />
                 {!registrationSuccess ? (
                   <motion.button
                     onClick={handleRegistration}
@@ -133,7 +131,7 @@ const EventDetail = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              Registered. Complete the payment in your <a href='/viewprofile' className='text-red-500 hover:underline'> Profile page </a> for successful regsitration
+              Registered. Complete the payment in your <a href="/viewprofile" className="text-red-500 hover:underline"> Profile page </a> for successful regsitration
             </motion.div>
           )}
         </motion.div>

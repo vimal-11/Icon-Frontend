@@ -1,4 +1,5 @@
 'use client';
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -8,7 +9,7 @@ import { useRouter } from 'next/navigation';
 const EventDetail = () => {
   const [event, setEvent] = useState(null);
   const [eventId, setEventId] = useState(null);
-  const uid = localStorage.getItem("user_id");
+  const uid = localStorage.getItem('user_id');
 
   useEffect(() => {
     const pathParts = window.location.pathname.split('/');
@@ -64,9 +65,9 @@ const EventDetail = () => {
           </ul>
 
           <p className="text-lg font-semibold">Event Name: {event.registration.event.title}</p>
-          <p className="text-lg font-semibold">Paid: {event.registration.is_paid ? "Yes" : "No"}</p>
+          <p className="text-lg font-semibold">Paid: {event.registration.is_paid ? 'Yes' : 'No'}</p>
           <p className="text-lg font-semibold">Registered At: {event.registration.registered_at}</p>
-          <p className="text-lg font-semibold">Team Event: {event.registration.event.is_team ? "Yes" : "No"}</p>
+          <p className="text-lg font-semibold">Team Event: {event.registration.event.is_team ? 'Yes' : 'No'}</p>
           {event.registration.event.is_team && (
             <motion.button
               onClick={() => handleAddTeamMember(event.registration.event.title, event.registration.event.id)}

@@ -1,10 +1,11 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 
-function TeamComponent() {
+const TeamComponent = () => {
   const [teamLead, setTeamLead] = useState('');
   const [teamMembers, setTeamMembers] = useState([]);
   const [studentSuggestions, setStudentSuggestions] = useState([]);
@@ -34,7 +35,7 @@ function TeamComponent() {
         .then((response) => response.json())
         .then((data) => {
           const teamID = data.id;
-          console.log("team id",teamID)
+          console.log('team id', teamID);
           localStorage.setItem('teamData', JSON.stringify(teamID));
           setStoredTeamID(teamID);
           fetchStudents(teamID);
@@ -178,7 +179,7 @@ function TeamComponent() {
       </motion.div>
     </>
   );
-}
+};
 
 export default TeamComponent;
 

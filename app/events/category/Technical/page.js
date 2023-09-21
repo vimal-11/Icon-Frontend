@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
@@ -28,9 +29,8 @@ const Event = () => {
   };
 
   const filteredEvents = events.filter(
-    (event) =>
-      event.category === 'Technical' &&
-      event.title.toLowerCase().includes(search.toLowerCase())
+    (event) => event.category === 'Technical'
+      && event.title.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (

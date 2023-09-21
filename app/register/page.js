@@ -1,5 +1,6 @@
-'use client'
-import { motion } from "framer-motion";
+'use client';
+
+import { motion } from 'framer-motion';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { textVariant, fadeIn, staggerContainer } from '../../utils/motion';
@@ -26,14 +27,14 @@ const Register = () => {
     e.preventDefault();
 
     if (userDetails.password !== confirmPassword) {
-      alert("Passwords do not match");
+      alert('Passwords do not match');
       return;
     }
 
     try {
       const response = await axios.post('http://127.0.0.1:8000/signup/', userDetails);
       console.log('Registration successful:', response.data);
-      alert("Registration successful. Login to continue");
+      alert('Registration successful. Login to continue');
       setShowPopup(true);
     } catch (error) {
       console.error('Registration failed:', error);
@@ -99,7 +100,7 @@ const Register = () => {
             Sign Up
           </button>
           <div className="w-full text-center mt-8">
-            <p className="text-sm text-white" >Already have an Account? <a href="/login" className="text-sm font-bold text-white">Login</a></p>
+            <p className="text-sm text-white">Already have an Account? <a href="/login" className="text-sm font-bold text-white">Login</a></p>
           </div>
         </motion.form>
       </motion.div>

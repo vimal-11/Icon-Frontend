@@ -1,7 +1,7 @@
 'use client';
-import { Footer, Navbar } from '../../components';
+
 import { motion } from 'framer-motion';
-import { TypingBoldText } from '../../components';
+import { Footer, Navbar, TypingBoldText } from '../../components';
 import styles from '../../styles';
 import { fadeIn, staggerContainer } from '../../utils/motion';
 
@@ -15,7 +15,7 @@ const developers = [
     link1: 'https://github.com/vimal-11',
     link2: 'https://www.linkedin.com/in/vimal11/',
     link3: 'https://www.instagram.com/_vimal._11/',
-    bio: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+    bio: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
   },
   {
     name: 'Laxman S',
@@ -25,7 +25,7 @@ const developers = [
     link1: 'https://github.com/laxx1612/',
     link2: 'https://www.linkedin.com/in/laxman-s-326555230/',
     link3: 'https://www.instagram.com/_._laxx/',
-    bio: `Another developer's bio goes here...`,
+    bio: 'Another developer\'s bio goes here...',
   },
   {
     name: 'Vimalan S',
@@ -35,7 +35,7 @@ const developers = [
     link1: 'https://github.com/laxx1612/',
     link2: 'https://www.linkedin.com/in/laxman-s-326555230/',
     link3: 'https://www.instagram.com/_._laxx/',
-    bio: `Another developer's bio goes here...`,
+    bio: 'Another developer\'s bio goes here...',
   },
 ];
 
@@ -105,7 +105,7 @@ const Page = () => (
         </div>
         <h2 className="text-4xl font-semibold text-center text-white my-8 mb-16 sm:text-4xl">Developers</h2>
         <div className="gradient-02 z-0 " />
-        {developers.map(developer => (
+        {developers.map((developer) => (
 
           <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words text-white bg-slate-700 w-full shadow-lg rounded-xl mt-[100px] mb-[20px]">
 
@@ -115,17 +115,18 @@ const Page = () => (
                   <div className="relative">
                     <img src={developer.image} className="aspect-square shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
                       style={{ width: '150px', height: '150px' }}
-                      alt={developer.name} />
+                      alt={developer.name}
+                    />
                   </div>
                 </div>
                 <div className="w-full text-center mt-20">
                   <div className="text-center mt-2">
                     <h3 className="text-2xl text-white font-bold leading-normal mb-1">{developer.name}</h3>
                     <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
-                      <i className="fas fa-map-marker-alt mr-2 text-white opacity-75"></i>{developer.year}
+                      <i className="fas fa-map-marker-alt mr-2 text-white opacity-75" />{developer.year}
                     </div>
                     <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
-                      <i className="fas fa-map-marker-alt mr-2 text-white opacity-75"></i>{developer.role}
+                      <i className="fas fa-map-marker-alt mr-2 text-white opacity-75" />{developer.role}
                     </div>
                   </div>
                   <div className="flex flex-col items-center justify-center lg:flex-row lg:pt-4 pt-4 md:pt-8 pb-0 font-sm">

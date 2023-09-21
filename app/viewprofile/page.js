@@ -1,21 +1,21 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import {
   textVariant,
   fadeIn,
   staggerContainer,
-} from "../../utils/motion";
-import Link from "next/link";
+} from '../../utils/motion';
 
-function StudentDetails() {
+const StudentDetails = () => {
   const [student, setStudent] = useState(null);
   const [events, setEvents] = useState([]);
-  
+
   // Check if localStorage is defined before using it
-  const uid = typeof localStorage !== 'undefined' ? localStorage.getItem("user_id") : null;
+  const uid = typeof localStorage !== 'undefined' ? localStorage.getItem('user_id') : null;
 
   useEffect(() => {
     // Check if uid is defined before making API requests
@@ -23,7 +23,7 @@ function StudentDetails() {
       async function fetchData() {
         try {
           const studentResponse = await axios.get(
-            `http://127.0.0.1:8000/student/${uid}`
+            `http://127.0.0.1:8000/student/${uid}`,
           );
           setStudent(studentResponse.data);
           const uname = studentResponse.data.name;
@@ -34,11 +34,11 @@ function StudentDetails() {
           }
 
           const eventsResponse = await axios.get(
-            `http://127.0.0.1:8000/students/${uid}/events/`
+            `http://127.0.0.1:8000/students/${uid}/events/`,
           );
           setEvents(eventsResponse.data);
         } catch (error) {
-          console.error("Error fetching data:", error);
+          console.error('Error fetching data:', error);
         }
       }
 
@@ -55,7 +55,7 @@ function StudentDetails() {
         className="flex justify-center items-center bg-primary-black overflow-hidden h-screen"
       >
         <div className="text-white text-center">
-          Profile not created and registered here -{" "}
+          Profile not created and registered here -{' '}
           <a href="/regprofile" className="text-bold text-green-500">
             Create profile
           </a>
@@ -73,7 +73,7 @@ function StudentDetails() {
     >
       {/* Student Details Section */}
       <motion.div
-        variants={fadeIn("up", "tween", 0.5, 0.5)}
+        variants={fadeIn('up', 'tween', 0.5, 0.5)}
         className="flex justify-center items-center h-screen"
       >
         <motion.div
@@ -83,7 +83,7 @@ function StudentDetails() {
             <img
               src={student.id_card}
               alt="ID Card"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
           </div>
           <motion.div
@@ -97,11 +97,11 @@ function StudentDetails() {
                 Name: <span className="text-blue-500">{student.name}</span>
               </li>
               <li className="text-white">
-                College:{" "}
+                College:{' '}
                 <span className="text-green-500">{student.college}</span>
               </li>
               <li className="text-white">
-                Department:{" "}
+                Department:{' '}
                 <span className="text-purple-500">{student.dept}</span>
               </li>
               <li className="text-white">
@@ -111,11 +111,11 @@ function StudentDetails() {
                 Email: <span className="text-yellow-500">{student.email}</span>
               </li>
               <li className="text-white">
-                Phone Number:{" "}
+                Phone Number:{' '}
                 <span className="text-orange-500">{student.ph_no}</span>
               </li>
               <li className="text-white">
-                Is Approved:{" "}
+                Is Approved:{' '}
                 {student.is_approved ? (
                   <span className="text-green-500">Yes</span>
                 ) : (
@@ -138,9 +138,9 @@ function StudentDetails() {
             <div
               key={event.id}
               className={`relative bg-white bg-opacity-20 p-4 rounded-lg mb-4 cursor-pointer transition-colors duration-300 ${index % 2 === 0
-                ? "hover:bg-red-500 hover:bg-opacity-90"
-                : "hover:bg-blue-500 hover:bg-opacity-90"
-                }`}
+                ? 'hover:bg-red-500 hover:bg-opacity-90'
+                : 'hover:bg-blue-500 hover:bg-opacity-90'
+              }`}
             >
               <h3 className="text-lg font-semibold text-white">
                 {event.event.title}
@@ -167,6 +167,6 @@ function StudentDetails() {
       </motion.div>
     </motion.div>
   );
-}
+};
 
 export default StudentDetails;

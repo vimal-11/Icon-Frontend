@@ -18,45 +18,45 @@ export const exploreWorlds = [
 export const eventData = [
   {
     id: 1,
-    title: "Event 1",
-    description: "Event 1 Description",
-    imageUrl: "/img-1.jpg",
-    buttonUrl: "#link1"
+    title: 'Event 1',
+    description: 'Event 1 Description',
+    imageUrl: '/img-1.jpg',
+    buttonUrl: '#link1',
   },
   {
     id: 2,
-    title: "Event 2",
-    description: "Event 1 Description",
-    imageUrl: "/img-1.jpg",
-    buttonUrl: "#link1"
+    title: 'Event 2',
+    description: 'Event 1 Description',
+    imageUrl: '/img-1.jpg',
+    buttonUrl: '#link1',
   },
   {
     id: 3,
-    title: "Event 3",
-    description: "Event 1 Description",
-    imageUrl: "/img-1.jpg",
-    buttonUrl: "#link1"
+    title: 'Event 3',
+    description: 'Event 1 Description',
+    imageUrl: '/img-1.jpg',
+    buttonUrl: '#link1',
   },
   {
     id: 4,
-    title: "Event 1",
-    description: "Event 1 Description",
-    imageUrl: "/img-1.jpg",
-    buttonUrl: "#link1"
+    title: 'Event 1',
+    description: 'Event 1 Description',
+    imageUrl: '/img-1.jpg',
+    buttonUrl: '#link1',
   },
   {
     id: 5,
-    title: "Event 1",
-    description: "Event 1 Description",
-    imageUrl: "/img-1.jpg",
-    buttonUrl: "#link1"
+    title: 'Event 1',
+    description: 'Event 1 Description',
+    imageUrl: '/img-1.jpg',
+    buttonUrl: '#link1',
   },
   {
     id: 6,
-    title: "Event 1",
-    description: "Event 1 Description",
-    imageUrl: "/img-1.jpg",
-    buttonUrl: "#link1"
+    title: 'Event 1',
+    description: 'Event 1 Description',
+    imageUrl: '/img-1.jpg',
+    buttonUrl: '#link1',
   },
 
 ];

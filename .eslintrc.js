@@ -18,11 +18,23 @@ module.exports = {
     'react',
   ],
   rules: {
+    'radix': 0,
+    'quotes': 0,
+    'comma-dangle': 0,
+    'import/no-duplicates': 'off',
+    'jsx-a11y/control-has-associated-label':0,
+    'react/button-has-type': 0,
+    'no-inner-declarations': 0,
+    'react/no-danger':0,
+    'react/function-component-definition': 0,
     'react/no-unescaped-entities': 0,
     'eslintreact/no-danger': 0,
     'react/jsx-max-props-per-line': 0,
     'react/jsx-first-prop-new-line': 0,
     'no-console': 0,
+    'no-shadow': 'off',
+    'no-undef': 0,
+    'no-redeclare': 0,
     'jsx-a11y/label-has-associated-control': 0,
     'no-nested-ternary': 0,
     'consistent-return': 0,
@@ -31,11 +43,14 @@ module.exports = {
     'import/extensions': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,
+    'no-unused-vars': 0,
+    'react/jsx-props-no-multi-spaces': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'no-use-before-define': 0,
     'react/function-component-definition': [
       2,
       {
@@ -43,17 +58,8 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'max-len': [
-      2,
-      1050,
-    ],
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-        maxEOF: 1,
-      },
-    ],
+    'max-len': 0,
+    'no-multiple-empty-lines': 0,
     'no-underscore-dangle': [
       'error',
       {

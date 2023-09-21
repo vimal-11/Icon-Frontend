@@ -6,9 +6,9 @@ const Page = () => (
   <div className="bg-primary-black overflow-hidden">
 
     <Navbar />
-    <Aboutus/>
+    <Aboutus />
     <Footer />
-    
+
   </div>
 );
 
