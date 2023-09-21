@@ -107,47 +107,48 @@ const Aboutus = () => (
                   {contributor.desc}
                 </div>
               </div>
-              <div className="flex justify-center lg:pt-4 pt-4 md:pt-8 pb-0">
-                <div className="p-3 text-center flex justify-content-center align-items-center">
+              <div className="flex flex-col justify-center items-center lg:flex-row lg:pt-4 pt-4 md:pt-8 pb-0">
+                <div className="p-3 text-center flex justify-center align-items-center">
                   <img
                     src="/github.svg"
-                    className="w-[20px] md:w-[28px] h-[20px] md:h-[28px] object-contain cursor-pointer"
+                    className="w-[20px] md:w-[28px] h-[20px] md:h-[28px] object-contain cursor-pointer mr-2"
                     alt="GitHub"
                   />
                   <a
                     href={contributor.link1}
-                    className="text-base md:text-xl font-bold block uppercase tracking-wide text-white"
+                    className="text-base md:text-sm font-bold block uppercase tracking-wide text-white"
                   >
                     Github
                   </a>
                 </div>
-                <div className="p-3 text-center flex justify-content-center align-items-center">
+                <div className="p-3 text-center flex justify-center align-items-center">
                   <img
                     src="/linkedin.svg"
-                    className="w-[18px] md:w-[24px] h-[18px] md:h-[24px] object-contain cursor-pointer"
+                    className="w-[18px] md:w-[24px] h-[18px] md:h-[24px] object-contain cursor-pointer mr-2"
                     alt="LinkedIn"
                   />
                   <a
                     href={contributor.link2}
-                    className="text-base md:text-xl font-bold block uppercase tracking-wide text-white"
+                    className="text-base md:text-sm font-bold block uppercase tracking-wide text-white"
                   >
                     Linkedin
                   </a>
                 </div>
-                <div className="p-3 text-center flex justify-content-center align-items-center">
+                <div className="p-3 text-center flex justify-center align-items-center">
                   <img
                     src="/instagram.svg"
-                    className="w-[18px] md:w-[24px] h-[18px] md:h-[24px] object-contain cursor-pointer"
+                    className="w-[18px] md:w-[24px] h-[18px] md:h-[24px] object-contain cursor-pointer mr-2"
                     alt="Instagram"
                   />
                   <a
                     href={contributor.link3}
-                    className="text-base md:text-xl font-bold block uppercase tracking-wide text-white"
+                    className="text-base md:text-sm font-bold block uppercase tracking-wide text-white"
                   >
                     Instagram
                   </a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -157,4 +158,3 @@ const Aboutus = () => (
 );
 
 export default Aboutus;
-
