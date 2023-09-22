@@ -32,9 +32,9 @@ const developers = [
     image: 'vimalan.jpg',
     year: 'IV Year',
     role: '',
-    link1: 'https://github.com/laxx1612/',
-    link2: 'https://www.linkedin.com/in/laxman-s-326555230/',
-    link3: 'https://www.instagram.com/_._laxx/',
+    link1: 'https://github.com/VimalanS369',
+    link2: 'https://www.linkedin.com/in/vimalan-s-6125861b1/',
+    link3: 'https://www.instagram.com/vimalan_pdy/',
     bio: 'Another developer\'s bio goes here...',
   },
 ];
@@ -59,7 +59,7 @@ const Page = () => (
             className="mt-4 font-montserrat text-lg text-center text-white leading-loose"
           >
             In the development of the{' '}
-            <span className="font-bold text-[28px] text-white">ICON 2k23</span> Event Registration Website for the CSE Department at Puducherry Technological University, our tech stack was at the heart of our success. We harnessed the power of Next.js 13 as our UI framework, ensuring efficient server-side rendering and a user-friendly routing system. Tailwind CSS emerged as our go-to CSS library, offering a vast array of utility classes for responsive and consistent styling. Daisy UI, a Tailwind CSS component plugin, expedited the creation of UI elements with its customizable components. On the backend, Django, the high-level Python web framework, handled user data, event information, and authentication seamlessly, supported by Django Rest Framework for smooth frontend-backend communication. To bring life and vibrancy to our web elements, we employed Framer Motion, a robust animation library. This blend of Next.js 13, Tailwind CSS, Daisy UI, Django, and Framer Motion formed the bedrock of our project, delivering a responsive and visually appealing platform for event registration, setting the stage for exceptional digital user experiences.
+            <span className="font-bold text-[28px] text-white">ICON 2k23</span> Website for the CSE Department at Puducherry Technological University, our tech stack was at the heart of our success. We harnessed the power of Next.js 13 as our UI framework, ensuring efficient server-side rendering and a user-friendly routing system. Tailwind CSS emerged as our go-to CSS library, offering a vast array of utility classes for responsive and consistent styling. Daisy UI, a Tailwind CSS component plugin, expedited the creation of UI elements with its customizable components. On the backend, Django, the high-level Python web framework, handled user data, event information, and authentication seamlessly, supported by Django Rest Framework for smooth frontend-backend communication. To bring life and vibrancy to our web elements, we employed Framer Motion, a robust animation library. This blend of Next.js 13, Tailwind CSS, Daisy UI, Django, and Framer Motion formed the bedrock of our project, delivering a responsive and visually appealing platform for event registration, setting the stage for exceptional digital user experiences.
           </motion.p>
         </motion.div>
         <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words text-white bg-slate-700 w-full shadow-lg rounded-xl mt-12 mb-24">

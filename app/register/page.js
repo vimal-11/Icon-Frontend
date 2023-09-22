@@ -38,6 +38,7 @@ const Register = () => {
       setShowPopup(true);
     } catch (error) {
       console.error('Registration failed:', error);
+      alert('Registration failed');
     }
   };
 
