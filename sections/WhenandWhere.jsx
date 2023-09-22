@@ -27,7 +27,7 @@ const WhenandWhere = () => (
               When is it ???
             </h1>
             <p className="flex-1 mt-[16px] font-normal text-[18px] text-[#B0B0B0] leading-[32.4px]">
-              Icon 2k23 is slated for the <b>final week of October </b>, A prestigious event poised to deliver insights, innovation, and inspiration globally.
+              Icon 2k23 is scheduled on <b>October 25th - 27th, 2023 </b>, A prestigious event poised to deliver insights, innovation, and inspiration globally.
             </p>
           </div>
           <div className="flex-1 flex flex-col sm:max-w-[250px] min-w-[210px]">

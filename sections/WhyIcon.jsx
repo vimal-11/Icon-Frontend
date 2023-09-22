@@ -34,7 +34,7 @@ const WhyIcon = () => (
 
           </div>
           <img
-            src="img-1.jpg"
+            src="planet-06.png"
             alt="dk"
             className="md:w-[270px] w-full h-[250px] rounded-[32px] object-cover"
           />
@@ -79,7 +79,7 @@ const WhyIcon = () => (
 
           </div>
           <img
-            src="img-1.jpg"
+            src="img-2.jpg"
             alt="dk"
             className="md:w-[270px] w-full h-[250px] rounded-[32px] object-cover"
           />
@@ -101,7 +101,7 @@ const WhyIcon = () => (
 
           </div>
           <img
-            src="img-1.jpg"
+            src="img-3.jpg"
             alt="dk"
             className="md:w-[270px] w-full h-[250px] rounded-[32px] object-cover"
           />

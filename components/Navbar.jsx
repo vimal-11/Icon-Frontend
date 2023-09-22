@@ -11,11 +11,11 @@ const Navbar = () => (
         </button>
         <ul className="menu dropdown-content mt-3 z-[1] p-2 shadow bg-primary-black rounded-box w-52">
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/events">Event Registration</a></li>
+          <li><a href="/events">Events</a></li>
           <li><a href="/regprofile">Create Profile</a></li>
           <li><a href="/viewprofile">My Profile</a></li>
           <li><a href="/register">Signup/Login</a></li>
+          <li><a href="/about">About Site</a></li>
           <li><a href="/office_bearers">Office Bearers</a></li>
         </ul>
 
