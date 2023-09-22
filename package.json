@@ -1,8 +1,11 @@
 {
   "name": "icon23",
-  "homepage": "https://icon-ptucse.in/",
+  "homepage": "http://icon-ptucse.in/",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.17.1"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
