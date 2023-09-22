@@ -26,7 +26,7 @@ const TeamComponent = () => {
       const authToken = localStorage.getItem('authToken');
       const uid = localStorage.getItem('user_id');
 
-      fetch(`http://127.0.0.1:8000/event-team-lead/${uid}/${newEventId}/`, {
+      fetch(`https://api.icon-ptucse.in/event-team-lead/${uid}/${newEventId}/`, {
         method: 'GET',
         headers: {
           Authorization: `Token ${authToken}`,
@@ -52,7 +52,7 @@ const TeamComponent = () => {
   async function fetchStudents(teamID) {
     try {
       const authToken = localStorage.getItem('authToken');
-      const studentsResponse = await fetch(`http://127.0.0.1:8000/add-team-member/${teamID}/`, {
+      const studentsResponse = await fetch(`https://api.icon-ptucse.in/add-team-member/${teamID}/`, {
         method: 'GET',
         headers: {
           Authorization: `Token ${authToken}`,
@@ -78,7 +78,7 @@ const TeamComponent = () => {
         team_member: formattedTeamMembers,
       };
 
-      await fetch(`http://127.0.0.1:8000/add-team-member/${storedTeamID}/`, {
+      await fetch(`https://api.icon-ptucse.in/add-team-member/${storedTeamID}/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

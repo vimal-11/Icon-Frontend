@@ -22,7 +22,7 @@ const EventDetail = () => {
 
     const fetchEventDetails = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/event-detail/${eventIdFromPath}/`);
+        const response = await axios.get(`https://api.icon-ptucse.in/event-detail/${eventIdFromPath}/`);
         console.log('event details  :', response.data);
         const eventData = response.data;
         setEvent(eventData);
@@ -46,7 +46,7 @@ const EventDetail = () => {
       const authToken = localStorage.getItem('authToken');
 
       // Send a POST request to the backend to register the user
-      const response = await axios.post('http://127.0.0.1:8000/register/', registrationData, {
+      const response = await axios.post('https://api.icon-ptucse.in/register/', registrationData, {
         headers: {
           Authorization: `Token ${authToken}`,
           'Content-Type': 'application/json',

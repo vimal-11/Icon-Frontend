@@ -23,7 +23,7 @@ const StudentDetails = () => {
       async function fetchData() {
         try {
           const studentResponse = await axios.get(
-            `http://127.0.0.1:8000/student/${uid}`,
+            `https://api.icon-ptucse.in/student/${uid}`,
           );
           setStudent(studentResponse.data);
           const uname = studentResponse.data.name;
@@ -34,7 +34,7 @@ const StudentDetails = () => {
           }
 
           const eventsResponse = await axios.get(
-            `http://127.0.0.1:8000/students/${uid}/events/`,
+            `https://api.icon-ptucse.in/students/${uid}/events/`,
           );
           setEvents(eventsResponse.data);
         } catch (error) {

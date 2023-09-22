@@ -32,7 +32,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/signup/', userDetails);
+      const response = await axios.post('https://api.icon-ptucse.in/signup/', userDetails);
       console.log('Registration successful:', response.data);
       alert('Registration successful. Login to continue');
       setShowPopup(true);
