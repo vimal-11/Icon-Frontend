@@ -14,7 +14,8 @@ const Navbar = () => (
           <li><a href="/events">Events</a></li>
           <li><a href="/regprofile">Create Profile</a></li>
           <li><a href="/viewprofile">My Profile</a></li>
-          <li><a href="/register">Signup/Login</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Signup</a></li>
           <li><a href="/about">About Site</a></li>
           <li><a href="/office_bearers">Office Bearers</a></li>
         </ul>
