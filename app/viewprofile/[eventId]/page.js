@@ -56,13 +56,17 @@ const EventDetail = () => {
           <h1 className="text-3xl font-bold mb-4">Event Details</h1>
           {/* <p className="text-lg font-semibold">Registration ID: {event.id}</p>
           <p className="text-lg font-semibold">UID: {uid}</p> */}
-          <p className="text-lg font-semibold">Team Lead: {event.team.team_lead.name}</p>
-          <p className="text-lg font-semibold">Team Members:</p>
-          <ul>
-            {event.team.team_member.map((member) => (
-              <li key={member.id}>{member.name}</li>
-            ))}
-          </ul>
+          {event.team ? (
+            <>
+              <p className="text-lg font-semibold">Team Lead: {event.team.team_lead.name}</p>
+              <p className="text-lg font-semibold">Team Members:</p>
+              <ul>
+                {event.team.team_member.map((member) => (
+                  <li key={member.id}>{member.name}</li>
+                ))}
+              </ul>
+            </>
+          ) : null}
 
           <p className="text-lg font-semibold">Event Name: {event.registration.event.title}</p>
           <p className="text-lg font-semibold">Paid: {event.registration.is_paid ? 'Yes' : 'No'}</p>

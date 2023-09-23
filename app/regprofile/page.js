@@ -122,8 +122,8 @@ const StudentComponent = () => {
             <input
               type="text"
               className="py-2 px-3 rounded-md border bg-transparent text-white w-full"
-              value={phNo}
-              onChange={(event) => setPhNo(event.target.value)}
+              value={`+91${phNo}`}
+              onChange={(event) => setPhNo(event.target.value.replace('+91', ''))}
             />
           </div>
           <div className="form-group pb-3 text-white">

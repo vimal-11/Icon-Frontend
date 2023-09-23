@@ -42,13 +42,13 @@ const Event = () => {
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl 2xl:text-6xl font-bold text-white mt-4 text-center md:py-2">
           Choose An Event
         </h1>
-        <div className="my-8 w-full sm:w-3/4 lg:w-1/2">
+        <div className="my-8 flex justify-center">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for an event..."
-            className="p-2 w-full"
+            className="p-2 w-full sm:w-64 lg:w-96" // Adjust the width as needed for responsiveness
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3 py-5 px-4 gap-0">

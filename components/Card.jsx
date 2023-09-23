@@ -9,12 +9,12 @@ const Card = ({ event }) => {
       <figure>
         <img src={`https://api.icon-ptucse.in/${event.banner}`} alt={event.title} />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">{event.title}</h2>
-        <p>{event.description}</p>
-        <div className="card-actions justify-end">
+      <div className="card-body flex flex-col items-center">
+        <h2 className="card-title text-center">{event.title}</h2>
+        <p className="text-center">{event.description}</p>
+        <div className="card-actions justify-center">
           <button type="button" className="btn btn-primary">
-            <a href={`/events/${event.id}`}>Click for full details</a>
+            <a href={`/events/${event.id}`}>Register</a>
           </button>
         </div>
       </div>

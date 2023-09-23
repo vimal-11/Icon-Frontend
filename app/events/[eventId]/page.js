@@ -101,10 +101,10 @@ const EventDetail = () => {
                 </motion.figure>
               </div>
               <div className="w-3/4 ml-4">
-                <h2 className="text-xl py-2">Event Name : {event.title}</h2>
+                <h2 className="text-xl py-2">{event.title}</h2>
                 <p className="text-lg py-2">Category : {event.category}</p>
-                <p className="text-lg py-2">Date : {event.date}</p>
-                <p className="text-lg py-2">Registration fee : {event.reg_fee}</p>
+                <p className="text-lg py-2">Date : {event.date} {event.event_time}</p>
+                <p className="text-lg py-2">Registration fee : {event.reg_fee} INR</p>
                 <p className="text-lg py-2">Venue : {event.venue}</p>
                 <div className="text-lg py-5 text-white" dangerouslySetInnerHTML={{ __html: event.rules }} />
                 {!registrationSuccess ? (

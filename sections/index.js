@@ -6,6 +6,7 @@ import WhenandWhere from './WhenandWhere';
 import World from './World';
 import WhyIcon from './WhyIcon';
 import Feedback from './Feedback';
+import Workshop from './Workshop';
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   World,
   WhyIcon,
   Feedback,
+  Workshop,
 };

@@ -44,7 +44,7 @@ const Register = () => {
               onClick={navigateToTechnical}
             >
               <img
-                src="/planet-03.png"
+                src="/planet-08.png"
                 alt="cult-card"
                 className="absolute w-full h-full object-cover rounded-[24px]"
               />
