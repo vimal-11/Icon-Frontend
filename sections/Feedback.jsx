@@ -20,9 +20,33 @@ const Feedback = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(fields);
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/feedback/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(fields),
+      });
+
+      if (response.ok) {
+        // Handle a successful response, such as displaying a success message.
+        console.log('Feedback submitted successfully');
+        alert('Feedback submitted successfully');
+      } else {
+        // Handle errors, such as displaying an error message.
+        console.error('Error submitting feedback');
+        alert('Error submitting feedback');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+      alert('An error occurred, try again');
+    }
+
   };
 
   return (
@@ -60,7 +84,7 @@ const Feedback = () => {
           />
           <textarea
             name="feedback"
-            placeholder="Your Feedback"
+            placeholder="Your Query"
             onChange={handleInputChange}
             value={fields.feedback}
             className="py-2 px-3 rounded-md border bg-transparent text-white w-full h-24 resize-none"
@@ -70,7 +94,7 @@ const Feedback = () => {
             type="submit"
             className="py-2 px-4 bg-purple-500 hover:bg-purple-600 text-white rounded-md w-full"
           >
-            Submit Feedback
+            Submit Query
           </button>
         </motion.form>
       </motion.div>
