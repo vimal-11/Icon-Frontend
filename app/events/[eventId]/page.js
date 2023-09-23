@@ -97,7 +97,7 @@ const EventDetail = () => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <img src={`${event.poster}`} alt={event.title} className="w-full" />
+                  <img src={`${event.banner}`} alt={event.title} className="w-full" />
                 </motion.figure>
               </div>
               <div className="w-3/4 ml-4">
