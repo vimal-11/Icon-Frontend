@@ -34,7 +34,7 @@ const Register = () => {
           viewport={{ once: false, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex flex-col`}
         >
-          <TitleText title={<>Register</>} textStyles="text-center" />
+          <TitleText title={<>Events</>} textStyles="text-center" />
           <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
             <motion.div
 
