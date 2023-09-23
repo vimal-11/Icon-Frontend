@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -11,6 +12,7 @@ import {
 } from '../../utils/motion';
 
 const StudentDetails = () => {
+  // const router = useRouter();
   const [student, setStudent] = useState(null);
   const [events, setEvents] = useState([]);
 
@@ -45,6 +47,86 @@ const StudentDetails = () => {
       fetchData();
     }
   }, [uid]);
+
+
+  const handlePaymentSuccess = async (response) => {
+    try {
+      // Send the response to your backend for payment validation
+      console.log(response);
+      const responseFromBackend = await axios.post("https://api.icon-ptucse.in/api/callback/", {
+        response: JSON.stringify(response),
+      });
+
+      // Handle success on the frontend as needed
+      console.log("Payment success:", responseFromBackend.data);
+      alert("Payment Success! Thank you for Registering.");
+      window.location.reload();
+
+      // Clear input fields
+      // setName("");
+      // setAmount("");
+    } catch (error) {
+      console.error("Error validating payment:", error);
+      alert("Payment Failed. Try Again");
+    }
+  };
+
+
+  const handlePaymentClick = async (e, event, regFee) => {
+    e.preventDefault();
+    console.log(event, regFee);
+    await loadScript();
+    const data = {
+      student_id: student.id, // Replace with the actual student ID
+      event_id: event.id, // Replace with the actual event ID
+      amount: regFee,
+    };
+
+    try {
+      const response = await axios.post('https://api.icon-ptucse.in/api/razorpay/', data);
+      // Handle the response here, e.g., redirect to the Razorpay page
+
+      const options = {
+        key: response.data.razorpay_key,
+        amount: response.data.order.amount,
+        currency: "INR",
+        name: response.data.student_name,
+        description: "Test Transaction",
+        order_id: response.data.order.id,
+        handler: function (response) {
+          handlePaymentSuccess(response);
+        },
+        prefill: {
+          name: "User's Name",
+          email: "User's Email",
+          contact: "User's Phone",
+        },
+        theme: {
+          color: "#3399cc",
+        },
+      };
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+      // Extract the Razorpay Gateway URL from the response
+      //  const razorpayGatewayUrl = response.data.razorpay_gateway_url;
+      // Redirect the user to the Razorpay Gateway URL
+      //  window.location.href = razorpayGatewayUrl;
+
+      // const { callback_url } = response.data;
+      // window.location.href = callback_url;
+      // router.push(callback_url);
+    } catch (error) {
+      console.error('Error initiating payment:', error);
+    }
+  };
+
+
+  const loadScript = () => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    document.body.appendChild(script);
+  };
+
 
   if (!student) {
     return (
@@ -153,10 +235,18 @@ const StudentDetails = () => {
                   {event.is_paid ? (
                     <li className="text-green-500 font-bold">Paid</li>
                   ) : (
-                    <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
+                    /* <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
                       <Link href={`/payevent/${event.event.reg_fee}`}>
                         Pay for event
                       </Link>
+                    </li> */
+                    <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
+                        <a
+                          href="#"
+                          onClick={(e) => handlePaymentClick(e, event.event, event.event.reg_fee)}
+                        >
+                        Pay for event
+                      </a>
                     </li>
                   )}
                 </ul>
