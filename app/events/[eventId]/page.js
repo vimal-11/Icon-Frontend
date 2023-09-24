@@ -59,9 +59,17 @@ const EventDetail = () => {
         // alert("Registration Successful!") // Show the success pop-up
       }
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response.status === 400) {
         alert('You have already registered for this event.'); // Show the success pop-up
       } else {
+        if (error.response.status === 404) {
+          alert('User and Profile does not exist. Create Profile to Register.'); // Show the success pop-up
+        }
+
+        if (error.response.status === 403) {
+          alert('Event does not exist.'); // Show the success pop-up
+        }
+
         console.error('Error registering for the event:', error);
         alert('Have an ICON profile in order to register for an event. Create a profile and continue.');
       }
