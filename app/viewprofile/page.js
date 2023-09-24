@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -241,12 +240,9 @@ const StudentDetails = () => {
                       </Link>
                     </li> */
                     <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
-                        <a
-                          href="#"
-                          onClick={(e) => handlePaymentClick(e, event.event, event.event.reg_fee)}
-                        >
-                        Pay for event
-                      </a>
+                        <button onClick={(e) => handlePaymentClick(e, event.event, event.event.reg_fee)}>
+                          Pay for event
+                        </button>
                     </li>
                   )}
                 </ul>
