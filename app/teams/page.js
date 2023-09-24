@@ -41,6 +41,9 @@ const TeamComponent = () => {
           fetchStudents(teamID);
         })
         .catch((error) => {
+          // if (error.response.status === 404) {
+          //   alert('You are not team lead.'); // Show the success pop-up
+          // }
           console.error('Error fetching event names:', error);
         });
 
@@ -87,7 +90,8 @@ const TeamComponent = () => {
         body: JSON.stringify(teamData),
       });
 
-      alert('Team Created Successfully');
+      alert('Team Member added successfully');
+      window.location.reload();
       setTeamLead('');
       setTeamMembers([]);
     } catch (err) {

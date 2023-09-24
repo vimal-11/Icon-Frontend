@@ -53,26 +53,32 @@ const EventDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-bold mb-4">Event Details</h1>
+          <h1 style={{ color: 'orange' }} className="text-3xl font-bold mb-4 text-center">Event Details</h1>
           {/* <p className="text-lg font-semibold">Registration ID: {event.id}</p>
           <p className="text-lg font-semibold">UID: {uid}</p> */}
+
+          <p className="text-lg font-semibold">{event.registration.event.title}</p>
+          <br />
           {event.team ? (
             <>
               <p className="text-lg font-semibold">Team Lead: {event.team.team_lead.name}</p>
               <p className="text-lg font-semibold">Team Members:</p>
               <ul>
                 {event.team.team_member.map((member) => (
-                  <li key={member.id}>{member.name}</li>
+                  <li key={member.id}>{member.name} - {member.college}</li>
                 ))}
               </ul>
+              <br />
             </>
           ) : null}
 
-          <p className="text-lg font-semibold">Event Name: {event.registration.event.title}</p>
           <p className="text-lg font-semibold">Paid: {event.registration.is_paid ? 'Yes' : 'No'}</p>
           <p className="text-lg font-semibold">Registered At: {event.registration.registered_at}</p>
-          <p className="text-lg font-semibold">Team Event: {event.registration.event.is_team ? 'Yes' : 'No'}</p>
-          {event.registration.event.is_team && (
+          <br />
+          {/* <p className="text-lg font-semibold">Team Event: {event.registration.event.is_team ? 'Yes' : 'No'}</p> */}
+
+          {event.registration.event.is_team ? (
+            event.registration.student.name === event.team.team_lead.name ? (
             <motion.button
               onClick={() => handleAddTeamMember(event.registration.event.title, event.registration.event.id)}
               whileHover={{ scale: 1.05 }}
@@ -81,7 +87,10 @@ const EventDetail = () => {
             >
               Add Team Member
             </motion.button>
-          )}
+            ) : (
+            <p style={{ color: 'yellow' }}>Only team lead can add team member.</p>
+            )
+          ) : null }
         </motion.div>
       ) : (
         <p>Loading event details...</p>
