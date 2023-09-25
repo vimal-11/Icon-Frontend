@@ -64,8 +64,8 @@ const contributors = [
     name: 'Robin Brito',
     desc: 'M.Tech Representative',
     image: 'robin.jpg',
-    link1: 'www.google.com',
-    link2: 'www.github.com',
+    link1: 'https://www.github.com',
+    link2: 'https://www.instagram.com',
     link3: '#',
     courseandyear: 'M.Tech II Year',
     description:
@@ -75,9 +75,9 @@ const contributors = [
     name: 'Jothika ',
     desc: 'MCA Representative',
     image: 'jothika.jpg',
-    link1: 'www.google.com',
-    link2: 'www.github.com',
-    link3: '#',
+    link1: 'https://www.github.com',
+    link2: 'https://www.linkedin.com/in/jothika-raja-b1235a1a4',
+    link3: 'https://www.instagram.com/jyotika.raja/',
     courseandyear: 'MCA II Year',
     description:
       "It is a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
