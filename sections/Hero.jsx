@@ -39,6 +39,20 @@ const Hero = () => (
         >
           <a href='/register'className="btn btn-sm md:btn-md lg:btn-lg btn-active lowercase ">Register Now</a>
         </motion.div>
+        <motion.h4
+          variants={textVariant(1.3)} // You can adjust the animation variant as needed
+          className="text-center text-xl text-white py-9"
+        >
+          Check{' '}
+          <motion.a
+            variants={textVariant(1.4)} // Animation variant for the link
+            href='/guidelines'
+            className='font-bold text-blue-400'
+          >
+            Guide
+          </motion.a>{' '}
+          for successful registration.
+        </motion.h4>
       </div>
       
 

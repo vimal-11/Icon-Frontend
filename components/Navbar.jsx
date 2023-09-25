@@ -18,6 +18,7 @@ const Navbar = () => (
           <li><a href="/register">Signup</a></li>
           <li><a href="/about">About Site</a></li>
           <li><a href="/office_bearers">Office Bearers</a></li>
+          <li><a href="/guidelines">How to register?</a></li>
         </ul>
 
       </div>

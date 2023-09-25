@@ -44,7 +44,7 @@ const Partners = () => (
               <motion.img
                 src="jet.png"
                 alt="interjet"
-                className="w-60 sm:w-64 md:w-80 h-auto object-contain"
+                className="w-96 sm:w-72 md:w-96 h-auto object-contain"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={fadeIn('up', 'tween', 0.2, 1)}
@@ -57,7 +57,7 @@ const Partners = () => (
               <motion.img
                 src="smile.png"
                 alt="interjet"
-                className="w-60 sm:w-64 md:w-80 h-auto object-contain"
+                className="w-96 sm:w-72 md:w-96 h-auto object-contain"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={fadeIn('up', 'tween', 0.2, 1)}
@@ -80,12 +80,12 @@ const Partners = () => (
           viewport={{ once: false, amount: 0.25 }}
           className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4"
         >
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-2 px-8">
             <a href="#" className="text-white-500 hover:underline hover:text-white-600 py-2">
               <motion.img
                 src="tea.png"
                 alt="TEA TIME"
-                className="w-60 sm:w-64 md:w-80 h-auto object-contain"
+                className="w-20 sm:w-64 md:w-40 h-auto object-contain"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={fadeIn('up', 'tween', 0.2, 1)}
@@ -93,12 +93,12 @@ const Partners = () => (
             </a>
             <p className="text-center">SNACK PARTNER</p>
           </div>
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-2 px-8">
             <a href="#" className="text-white-500 hover:underline hover:text-white-600 py-2">
               <motion.img
                 src="klebs.png"
                 alt="KLEBS"
-                className="w-60 sm:w-64 md:w-80 h-auto object-contain"
+                className="w-20 sm:w-64 md:w-40 h-auto object-contain"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={fadeIn('up', 'tween', 0.2, 1)}
@@ -106,12 +106,12 @@ const Partners = () => (
             </a>
             <p className="text-center">FASHION PARTNER</p>
           </div>
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-2 px-8">
             <a href="https://www.instagram.com/pondydiaries/" className="text-white-500 hover:underline hover:text-white-600 py-2">
               <motion.img
                 src="pdy.png"
                 alt="PONDY DIARIES"
-                className="w-60 sm:w-64 md:w-80 h-auto object-contain"
+                className="w-20 sm:w-64 md:w-40 h-auto object-contain"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={fadeIn('up', 'tween', 0.2, 1)}
