@@ -53,7 +53,7 @@ const contributors = [
     name: 'Bharani M',
     desc: 'Assosiate Treasurer',
     image: 'bharani.jpg',
-    link1: '#',
+    link1: 'https://github.com/bharani-kcm',
     link2: 'https://www.linkedin.com/in/bharani-m-b32265287',
     link3: 'https://www.instagram.com/bharani_kcm/',
     courseandyear: 'CSE, III Year',

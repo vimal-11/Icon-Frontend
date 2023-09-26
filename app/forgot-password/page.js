@@ -17,8 +17,14 @@ const ForgotPassword = () => {
       console.log('Reset Password:', response.data);
       setResetSuccess(true);
     } catch (error) {
-      console.error('Password reset request failed:', error);
-      alert('Password reset request failed. Please try again.');
+      if (error.response.status === 400) {
+        alert('This email is not registered. Provide registered email.'); // Show the success pop-up
+        setEmail('');
+      } else {
+        console.error('Password reset request failed:', error);
+        alert('Password reset request failed. Please try again.');
+        setEmail('');
+      }
     }
   };
 

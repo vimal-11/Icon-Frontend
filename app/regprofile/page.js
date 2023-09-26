@@ -73,7 +73,7 @@ const StudentComponent = () => {
             Student Profile
           </h1>
           <div className="form-group text-white">
-            <label>Name</label>
+            <label>Full Name</label>
             <input
               type="text"
               className="py-2 px-3 rounded-md border bg-transparent text-white w-full"
@@ -127,7 +127,7 @@ const StudentComponent = () => {
             />
           </div>
           <div className="form-group pb-3 text-white">
-            <label>ID Card </label>
+            <label>ID Card (less than 2mb)</label>
             <input
               type="file"
               name="id_card"
