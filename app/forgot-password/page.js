@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { textVariant,fadeIn, staggerContainer } from '../../utils/motion';
 import { useState } from 'react';
 import axios from 'axios';
+import { textVariant, fadeIn, staggerContainer } from '../../utils/motion';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 
   const handleResetPassword = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/password-reset/', {
+      const response = await axios.post('https://api.icon-ptucse.in/api/password-reset/', {
         email,
       });
       console.log('Reset Password:', response.data);
