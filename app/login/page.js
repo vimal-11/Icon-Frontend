@@ -98,8 +98,8 @@ const Login = () => {
             Login
           </button>
           <div className="w-full text-center mt-8">
-            <a href="#forgot-password" className="text-sm text-white">Forgot password?</a>
-            <a href="#sign-up" className="text-sm text-white ml-4">Sign up</a>
+            <a href="/forgot-password" className="text-sm text-white">Forgot password?</a>
+            <a href="/register" className="text-sm text-white ml-4">Sign up</a>
           </div>
         </motion.form>
       </motion.div>
