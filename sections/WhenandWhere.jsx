@@ -35,7 +35,7 @@ const WhenandWhere = () => (
               Where is it ???
             </h1>
             <p className="flex-1 mt-[16px] font-normal text-[18px] text-[#B0B0B0] leading-[32.4px]">
-              Icon 2k23 unfolds across diverse venues:<b>PTU Auditorium </b>, PTU Outdoor and Indoor grounds, and CSE Department classrooms.
+              Icon 2k23 unfolds across diverse venues:<b> PTU Auditorium </b>, PTU Outdoor and Indoor grounds, and CSE Department classrooms.
             </p>
           </div>
         </div>
