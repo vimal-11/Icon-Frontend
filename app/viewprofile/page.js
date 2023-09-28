@@ -48,83 +48,83 @@ const StudentDetails = () => {
   }, [uid]);
 
 
-  const handlePaymentSuccess = async (response) => {
-    try {
-      // Send the response to your backend for payment validation
-      console.log(response);
-      const responseFromBackend = await axios.post("https://api.icon-ptucse.in/api/callback/", {
-        response: JSON.stringify(response),
-      });
+  // const handlePaymentSuccess = async (response) => {
+  //   try {
+  //     // Send the response to your backend for payment validation
+  //     console.log(response);
+  //     const responseFromBackend = await axios.post("https://api.icon-ptucse.in/api/callback/", {
+  //       response: JSON.stringify(response),
+  //     });
 
-      // Handle success on the frontend as needed
-      console.log("Payment success:", responseFromBackend.data);
-      alert("Payment Success! Thank you for Registering.");
-      window.location.reload();
+  //     // Handle success on the frontend as needed
+  //     console.log("Payment success:", responseFromBackend.data);
+  //     alert("Payment Success! Thank you for Registering.");
+  //     window.location.reload();
 
-      // Clear input fields
-      // setName("");
-      // setAmount("");
-    } catch (error) {
-      console.error("Error validating payment:", error);
-      alert("Payment Failed. Try Again");
-    }
-  };
-
-
-  const handlePaymentClick = async (e, event, regFee) => {
-    e.preventDefault();
-    console.log(event, regFee);
-    await loadScript();
-    const data = {
-      student_id: student.id, // Replace with the actual student ID
-      event_id: event.id, // Replace with the actual event ID
-      amount: regFee,
-    };
-
-    try {
-      const response = await axios.post('https://api.icon-ptucse.in/api/razorpay/', data);
-      // Handle the response here, e.g., redirect to the Razorpay page
-
-      const options = {
-        key: response.data.razorpay_key,
-        amount: response.data.order.amount,
-        currency: "INR",
-        name: response.data.student_name,
-        description: "Test Transaction",
-        order_id: response.data.order.id,
-        handler: function (response) {
-          handlePaymentSuccess(response);
-        },
-        prefill: {
-          name: "User's Name",
-          email: "User's Email",
-          contact: "User's Phone",
-        },
-        theme: {
-          color: "#3399cc",
-        },
-      };
-      const rzp = new window.Razorpay(options);
-      rzp.open();
-      // Extract the Razorpay Gateway URL from the response
-      //  const razorpayGatewayUrl = response.data.razorpay_gateway_url;
-      // Redirect the user to the Razorpay Gateway URL
-      //  window.location.href = razorpayGatewayUrl;
-
-      // const { callback_url } = response.data;
-      // window.location.href = callback_url;
-      // router.push(callback_url);
-    } catch (error) {
-      console.error('Error initiating payment:', error);
-    }
-  };
+  //     // Clear input fields
+  //     // setName("");
+  //     // setAmount("");
+  //   } catch (error) {
+  //     console.error("Error validating payment:", error);
+  //     alert("Payment Failed. Try Again");
+  //   }
+  // };
 
 
-  const loadScript = () => {
-    const script = document.createElement("script");
-    script.src = "https://checkout.razorpay.com/v1/checkout.js";
-    document.body.appendChild(script);
-  };
+  // const handlePaymentClick = async (e, event, regFee) => {
+  //   e.preventDefault();
+  //   console.log(event, regFee);
+  //   await loadScript();
+  //   const data = {
+  //     student_id: student.id, // Replace with the actual student ID
+  //     event_id: event.id, // Replace with the actual event ID
+  //     amount: regFee,
+  //   };
+
+  //   try {
+  //     const response = await axios.post('https://api.icon-ptucse.in/api/razorpay/', data);
+  //     // Handle the response here, e.g., redirect to the Razorpay page
+
+  //     const options = {
+  //       key: response.data.razorpay_key,
+  //       amount: response.data.order.amount,
+  //       currency: "INR",
+  //       name: response.data.student_name,
+  //       description: "Test Transaction",
+  //       order_id: response.data.order.id,
+  //       handler: function (response) {
+  //         handlePaymentSuccess(response);
+  //       },
+  //       prefill: {
+  //         name: "User's Name",
+  //         email: "User's Email",
+  //         contact: "User's Phone",
+  //       },
+  //       theme: {
+  //         color: "#3399cc",
+  //       },
+  //     };
+  //     const rzp = new window.Razorpay(options);
+  //     rzp.open();
+  //     // Extract the Razorpay Gateway URL from the response
+  //     //  const razorpayGatewayUrl = response.data.razorpay_gateway_url;
+  //     // Redirect the user to the Razorpay Gateway URL
+  //     //  window.location.href = razorpayGatewayUrl;
+
+  //     // const { callback_url } = response.data;
+  //     // window.location.href = callback_url;
+  //     // router.push(callback_url);
+  //   } catch (error) {
+  //     console.error('Error initiating payment:', error);
+  //   }
+  // };
+
+
+  // const loadScript = () => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://checkout.razorpay.com/v1/checkout.js";
+  //   document.body.appendChild(script);
+  // };
 
 
   if (!student) {
@@ -211,10 +211,10 @@ const StudentDetails = () => {
       <motion.div className="mt-8 bg-black bg-opacity-30 p-4 rounded-lg text-white">
         <h2 className="text-2xl font-semibold text-center mb-4">Registered Events</h2>
         <p className="text-lg mb-4 py-4 text-center font-medium">
-          Click on the card to view Event details and to Add Team members for Team Events
+          Check event details & <span className="text-green-500 font-bold">Add Team members </span> by clicking on <span className="text-blue-500 font-bold">Click here for full details. </span>
         </p>
 
-        {events.map((event, index) => (
+        {/* {events.map((event, index) => (
           <Link key={event.id} href={`/viewprofile/${event.id}`}>
             <div
               key={event.id}
@@ -234,11 +234,11 @@ const StudentDetails = () => {
                   {event.is_paid ? (
                     <li className="text-green-500 font-bold">Paid</li>
                   ) : (
-                    /* <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
+                    <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
                       <Link href={`/payevent/${event.event.reg_fee}`}>
                         Pay for event
                       </Link>
-                    </li> */
+                    </li>
                     <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
                         <button onClick={(e) => handlePaymentClick(e, event.event, event.event.reg_fee)}>
                           Pay for event
@@ -249,7 +249,50 @@ const StudentDetails = () => {
               </div>
             </div>
           </Link>
-        ))}
+        ))} */}
+
+          {events.map((event, index) => (
+            <div
+              key={event.id}
+              className={`relative bg-white bg-opacity-20 p-4 rounded-lg mb-4 cursor-pointer transition-colors duration-300 ${index % 2 === 0
+                ? "hover:bg-green-500 hover:bg-opacity-90"
+                : "hover:bg-blue-500 hover:bg-opacity-90"
+              }`}
+            >
+              <Link key={event.id} href={`/viewprofile/${event.id}`}>
+              <h3 className="text-lg font-semibold text-white">
+                {event.event.title}
+              </h3>
+              <p className="text-sm text-gray-400 mt-2">
+                Date: {event.event.date}
+              </p>
+              <p className="text-sm text-gray-400 mt-2">
+                Amount: {event.event.reg_fee}
+              </p>
+              </Link>
+              <div className="text-sm text-gray-400 mt-2 flex justify-end">
+                <ul>
+                  {event.is_paid ? (
+                    <li className="text-green-500 font-bold">Paid</li>
+                  ) : (
+                    <li className="text-sm text-white font-bold mt-2 bg-red-500 py-1 px-4 rounded-md hover:bg-red-600">
+                      <Link href="https://forms.gle/wuBCrrzEH3WqvqtHA">
+                        Pay for event
+                      </Link>
+                    </li>
+                  )}
+                </ul>
+              </div>
+              <div className="text-sm text-gray-400 mt-2 flex justify-end">
+                <Link key={event.id} href={`/viewprofile/${event.id}`}>
+                  <button className="text-sm text-gray-400 border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-400 hover:text-white">
+                    Click here for full details
+                  </button>
+                </Link>
+              </div>
+              {/* <Link className="text-sm text-gray-400 mt-2 flex" key={event.id} href={`/viewprofile/${event.id}`}>Click here for full details</Link> */}
+            </div>
+          ))}
       </motion.div>
     </motion.div>
   );
