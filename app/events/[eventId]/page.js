@@ -60,7 +60,7 @@ const EventDetail = () => {
         alert("You have already registered for this event.");
       } else {
         console.error('Error registering for the event:', error);
-        // alert("Have an ICON profile in order to register for an event. Create a profile and continue.");
+        alert("Have an ICON profile in order to register for an event. Create a profile and continue.");
       }
     }
   };
@@ -93,7 +93,7 @@ const EventDetail = () => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <img src={`${event.poster}`} alt={event.title} className="w-full" />
+                  <img src={`${event.banner}`} alt={event.title} className="w-full" />
                 </motion.figure>
               </div>
               <div className="col-span-1">
@@ -105,6 +105,17 @@ const EventDetail = () => {
               </div>
               <div className="col-span-2">
                 <div className="text-lg text-white" style={{ wordWrap: 'break-word' }} dangerouslySetInnerHTML={{ __html: event.rules }} />
+                {!registrationSuccess && (
+                  <motion.button
+                    onClick={handleRegistration}
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    Register for Event
+                  </motion.button>
+                )}
               </div>
             </div>
           ) : (
