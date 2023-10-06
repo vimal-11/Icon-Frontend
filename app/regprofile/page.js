@@ -126,7 +126,7 @@ const StudentComponent = () => {
               onChange={(event) => setPhNo(event.target.value.replace('+91', ''))}
             />
           </div>
-          <div className="form-group pb-3 text-white">
+          {/* <div className="form-group pb-3 text-white">
             <label>ID Card (less than 2mb)</label>
             <input
               type="file"
@@ -134,7 +134,7 @@ const StudentComponent = () => {
               className="py-2 px-3 rounded-md border bg-transparent text-white w-full"
               onChange={handleImageChange}
             />
-          </div>
+          </div> */}
           <div className="py-5 flex flex-col items-center justify-center">
             <button
               className="py-2 px-4 bg-[rgb(60,44,139)] hover:bg-[rgb(48,35,112)] text-white rounded-lg align-items-center justify-content"

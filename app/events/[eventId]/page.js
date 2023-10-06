@@ -56,7 +56,7 @@ const EventDetail = () => {
         setShowSuccessPopup(true);
       }
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response.status === 403) {
         alert("You have already registered for this event.");
       } else {
         console.error('Error registering for the event:', error);
@@ -97,10 +97,10 @@ const EventDetail = () => {
                 </motion.figure>
               </div>
               <div className="col-span-1">
-                <h2 className="text-xl py-2">Event Name: {event.title}</h2>
+                <h2 className="text-xl py-2">{event.title}</h2>
                 <p className="text-lg py-2">Category: {event.category}</p>
-                <p className="text-lg py-2">Date: {event.date}</p>
-                <p className="text-lg py-2">Registration fee: {event.reg_fee}</p>
+                {/* <p className="text-lg py-2">Date: {event.date}</p> */}
+                <p className="text-lg py-2">Registration fee: INR {event.reg_fee}</p>
                 <p className="text-lg py-2">Venue: {event.venue}</p>
               </div>
               <div className="col-span-2">
