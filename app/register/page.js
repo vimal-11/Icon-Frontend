@@ -38,7 +38,7 @@ const Register = () => {
       setShowPopup(true);
     } catch (error) {
       console.error('Registration failed:', error);
-      alert('Registration failed');
+      alert('Registration failed. This email may have been registered aldready.');
     }
   };
 

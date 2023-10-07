@@ -31,14 +31,47 @@ const Footer = () => (
             {/* <p className="font-normal text-[14px] text-white opacity-50">
             Mail : <span className='font-extrabold'>icon@ptuniv.edu.in</span>
           </p> */}
-            {socials.map((social) => (
-              <img
-                key={social.name}
-                src={social.url}
-                alt={social.name}
-                className="w-[24px] h-[24px] object-contain cursor-pointer"
-              />
-            ))}
+            {/* {socials.map((social) => (
+               <a
+                 key={social.name}
+                 href={social.href}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="text-blue-500 hover:text-blue-700"
+               >
+                <img
+                  src={social.url}
+                  alt={social.name}
+                  className="w-[24px] h-[24px]"
+                /> Hello
+               </a> */}
+              <a
+                href="https://github.com/vimal-11/Icon-Frontend/tree/production"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+                style={{ cursor: 'pointer' }}
+              >
+                <img
+                  src="/github.svg"
+                  alt="/github.svg"
+                  className="w-[24px] h-[24px]"
+                />
+              </a>
+              <a
+                href="'https://github.com/vimal-11/Icon'"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+                style={{ cursor: 'pointer' }}
+              >
+                <img
+                  src="/github.svg"
+                  alt="/github.svg"
+                  className="w-[24px] h-[24px]"
+                />
+              </a>
+            {/* ))} */}
           </div>
         </div>
       </div>

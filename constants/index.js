@@ -64,20 +64,30 @@ export const eventData = [
 export const logos = ['icon_finale.png', 'star n.png', 'ptu-logo.png', 'icon_finale.png', 'star n.png', 'ptu-logo.png']; // Add your logo URLs
 
 export const socials = [
+  // {
+  //   name: 'twitter',
+  //   url: '/twitter.svg',
+  // },
+  // {
+  //   name: 'linkedin',
+  //   url: '/linkedin.svg',
+  // },
+  // {
+  //   name: 'instagram',
+  //   url: '/instagram.svg',
+  // },
+  // {
+  //   name: 'facebook',
+  //   url: '/facebook.svg',
+  // },
   {
-    name: 'twitter',
-    url: '/twitter.svg',
+    name: 'Github',
+    url: '/github.svg',
+    href: 'https://github.com/vimal-11/Icon-Frontend/tree/production',
   },
   {
-    name: 'linkedin',
-    url: '/linkedin.svg',
-  },
-  {
-    name: 'instagram',
-    url: '/instagram.svg',
-  },
-  {
-    name: 'facebook',
-    url: '/facebook.svg',
+    name: 'Github',
+    url: '/github.svg',
+    href: 'https://github.com/vimal-11/Icon',
   },
 ];
