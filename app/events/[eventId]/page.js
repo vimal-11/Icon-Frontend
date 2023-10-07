@@ -86,55 +86,59 @@ const EventDetail = () => {
           transition={{ duration: 0.5 }}
         >
           {event ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="col-span-1">
-                <motion.figure
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <img src={`${event.banner}`} alt={event.title} className="w-full" />
-                </motion.figure>
-              </div>
-              <div className="col-span-1">
+            <div className="md:flex md:flex-row md:space-x-4">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="md:flex-shrink-0"
+              >
+                {/* Use the HTML img tag for responsive images */}
+                <img
+                  src={`${event.banner}`}
+                  alt={event.title}
+                  className="w-full max-w-full  md:w-64 lg:w-72 xl:w-64"
+                />
+              </motion.div>
+              <div className="md:flex-grow">
                 <h2 className="text-xl py-2">{event.title}</h2>
                 <p className="text-lg py-2">Category: {event.category}</p>
                 {/* <p className="text-lg py-2">Date: {event.date}</p> */}
                 <p className="text-lg py-2">Registration fee: INR {event.reg_fee}</p>
                 <p className="text-lg py-2">Venue: {event.venue}</p>
               </div>
-              <div className="col-span-2">
-                <div className="text-lg text-white" style={{ wordWrap: 'break-word' }} dangerouslySetInnerHTML={{ __html: event.rules }} />
-                {!registrationSuccess && (
-                  <motion.button
-                    onClick={handleRegistration}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    Register for Event
-                  </motion.button>
-                )}
-              </div>
             </div>
           ) : (
-            <p>Loading event details...</p>
+              <p>Loading event details...</p>
           )}
-          {showSuccessPopup && (
-            <motion.div
-              className="bg-green-500 text-white font-bold p-2 rounded fixed top-4 right-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              Registered. Complete the payment in your{' '}
-              <a href="/viewprofile" className="text-red-500 hover:underline">
-                Profile page
-              </a>{' '}
-              for successful registration
-            </motion.div>
-          )}
+            {event && (
+              <div className="text-lg text-white" style={{ wordWrap: 'break-word' }} dangerouslySetInnerHTML={{ __html: event.rules }} />
+            )}
+            {!registrationSuccess && event && (
+              <motion.button
+                onClick={handleRegistration}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Register for Event
+              </motion.button>
+            )}
+            {showSuccessPopup && (
+              <motion.div
+                className="bg-green-500 text-white font-bold p-2 rounded fixed top-4 right-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Registered. Complete the payment in your{' '}
+                <a href="/viewprofile" className="text-red-500 hover:underline">
+                  Profile page
+                </a>{' '}
+                for successful registration
+              </motion.div>
+            )}
         </motion.div>
       </motion.div>
     </>
