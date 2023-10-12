@@ -103,7 +103,8 @@ const EventDetail = () => {
               <div className="md:flex-grow">
                 <h2 className="text-xl py-2">{event.title}</h2>
                 <p className="text-lg py-2">Category: {event.category}</p>
-                {/* <p className="text-lg py-2">Date: {event.date}</p> */}
+                <p className="text-lg py-2">Date: {event.date}</p>
+                <p className="text-lg py-2">Time: {event.event_time}</p>
                 <p className="text-lg py-2">Registration fee: INR {event.reg_fee}</p>
                 <p className="text-lg py-2">Venue: {event.venue}</p>
               </div>
