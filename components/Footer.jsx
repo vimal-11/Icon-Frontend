@@ -11,7 +11,7 @@ const Footer = () => (
     variants={footerVariants}
     initial="hidden"
     whileInView="show"
-    className={`${styles.xPaddings} py-8 relative`}
+    className={`${styles.xPaddings} py-8 relative `}
   >
     <div className="gradient-02" />
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
@@ -23,55 +23,23 @@ const Footer = () => (
           <h4 className="font-extrabold text-[24px] text-white">
             ICON
           </h4>
-          <p className="font-normal text-[14px] text-white opacity-50">
-            Exploring Horizons, Unleashing Innovations
+          <p className="font-normal text-[14px] text-white">
+            Made with ❤️ From PTU
           </p>
 
           <div className="flex gap-4">
-            {/* <p className="font-normal text-[14px] text-white opacity-50">
-            Mail : <span className='font-extrabold'>icon@ptuniv.edu.in</span>
-          </p> */}
-            {/* {socials.map((social) => (
-               <a
-                 key={social.name}
-                 href={social.href}
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="text-blue-500 hover:text-blue-700"
-               >
-                <img
-                  src={social.url}
-                  alt={social.name}
-                  className="w-[24px] h-[24px]"
-                /> Hello
-               </a> */}
-              <a
-                href="https://github.com/vimal-11/Icon-Frontend/tree/production"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
-                style={{ cursor: 'pointer' }}
-              >
-                <img
-                  src="/github.svg"
-                  alt="/github.svg"
-                  className="w-[24px] h-[24px]"
-                />
+            {socials.map((social) => (
+            <button type="button" className="btn btn-ghost btn-circle z-0">
+              <a href={social.furl}>
+              <img
+                key={social.name}
+                src={social.url}
+                alt={social.name}
+                className="w-[24px] h-[24px] object-contain cursor-pointer"
+              />
               </a>
-              <a
-                href="'https://github.com/vimal-11/Icon'"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
-                style={{ cursor: 'pointer' }}
-              >
-                <img
-                  src="/github.svg"
-                  alt="/github.svg"
-                  className="w-[24px] h-[24px]"
-                />
-              </a>
-            {/* ))} */}
+            </button>
+            ))}
           </div>
         </div>
       </div>
