@@ -50,7 +50,7 @@ const Partners = () => (
                 variants={fadeIn('up', 'tween', 0.2, 1)}
               />
             </a>
-            <p className="text-center">FASTEST INTERNET IN PUDUCHERRY</p>
+            <p className="text-center text-white">FASTEST INTERNET IN PUDUCHERRY</p>
           </div>
           <div className="flex flex-col items-center space-y-2">
             <a href="https://www.smileytrips.com" className="text-white-500 hover:underline hover:text-white-600 py-2">
@@ -63,10 +63,42 @@ const Partners = () => (
                 variants={fadeIn('up', 'tween', 0.2, 1)}
               />
             </a>
-            <p className="text-center">SMILEY TRIPS</p>
+            <p className="text-center text-white">SMILEY TRIPS</p>
           </div>
         </motion.div>
       </div>
+      <br />
+      <br />
+      <br />
+      <div className="flex flex-col items-center py-2">
+      <h4 className="text-white text-2xl font-bold tracking-wide mb-4 text-center mt-8 sm:mt-1">
+        CO SPONSORS
+      </h4>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4"
+        >
+          <div className="flex flex-col items-center space-y-2">
+            <a href="#" className="text-white-500 hover:underline hover:text-white-600 py-2">
+              <motion.img
+                src="Indofrench.png"
+                alt="interjet"
+                className="w-56 sm:w-32 md:w-56 h-auto object-contain"  
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={fadeIn('up', 'tween', 0.2, 1)}
+              />
+            </a>
+            <p className="text-center text-white">INDOFRENCH MATTRESS</p>
+          </div>
+        </motion.div>
+      </div>
+      <br />
+      <br />
       <div className="flex flex-col items-center mt-8 py-3">
         <h4 className="text-white text-2xl font-bold tracking-wide mb-4 text-center">
           PARTNERS
@@ -91,7 +123,7 @@ const Partners = () => (
                 variants={fadeIn('up', 'tween', 0.2, 1)}
               />
             </a>
-            <p className="text-center">SNACK PARTNER</p>
+            <p className="text-center text-white">SNACK PARTNER</p>
           </div>
           <div className="flex flex-col items-center space-y-2 px-8">
             <a href="#" className="text-white-500 hover:underline hover:text-white-600 py-2">
@@ -104,7 +136,7 @@ const Partners = () => (
                 variants={fadeIn('up', 'tween', 0.2, 1)}
               />
             </a>
-            <p className="text-center">FASHION PARTNER</p>
+            <p className="text-center text-white">FASHION PARTNER</p>
           </div>
           <div className="flex flex-col items-center space-y-2 px-8">
             <a href="https://www.instagram.com/pondydiaries/" className="text-white-500 hover:underline hover:text-white-600 py-2">
@@ -117,7 +149,20 @@ const Partners = () => (
                 variants={fadeIn('up', 'tween', 0.2, 1)}
               />
             </a>
-            <p className="text-center">SOCIAL MEDIA PARTNER</p>
+            <p className="text-center text-white">SOCIAL MEDIA PARTNER</p>
+          </div>
+          <div className="flex flex-col items-center space-y-2 px-8">
+            <a href="#" className="text-white-500 hover:underline hover:text-white-600 py-2">
+              <motion.img
+                src="vgrmotorsedited.png"
+                alt="VGRMOTORS"
+                className="w-20 sm:w-54 md:w-30 h-auto object-contain "
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={fadeIn('up', 'tween', 0.2, 1)}
+              />
+            </a>
+            <p className="text-center text-white">VGR MOTORS</p>
           </div>
         </motion.div>
       </div>
