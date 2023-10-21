@@ -18,6 +18,7 @@ const Navbar = () => (
           <li><a href="/register">Signup</a></li>
           <li><a href="/about">About Site</a></li>
           <li><a href="/office_bearers">Office Bearers</a></li>
+          <li><a href="https://drive.google.com/file/d/1JQQvTeftHlRq3zgmiHdAum9_a34fFmbi/view?usp=share_link">Event Schedule</a></li>
           <li><a href="/guidelines">How to register?</a></li>
         </ul>
 
