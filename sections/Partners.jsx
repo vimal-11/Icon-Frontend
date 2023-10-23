@@ -164,6 +164,19 @@ const Partners = () => (
             </a>
             <p className="text-center text-white">VGR MOTORS</p>
           </div>
+          <div className="flex flex-col items-center space-y-2 px-8">
+            <a href="#" className="text-white-500 hover:underline hover:text-white-600 py-2">
+              <motion.img
+                src="startup.png"
+                alt="VGRMOTORS"
+                className="w-20 sm:w-54 md:w-30 h-auto object-contain "
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={fadeIn('up', 'tween', 0.2, 1)}
+              />
+            </a>
+            <p className="text-center text-white">EDUCATIONAL PARTNER</p>
+          </div>
         </motion.div>
       </div>
     </div>

@@ -14,7 +14,7 @@ const Workshop = () => (
             viewport={{ once: false, amount: 0.25 }}
             className={`${styles.innerWidth} mx-auto flex flex-col items-center`}
         >
-            <TitleText title={<>Join Our Workshop</>} textStyles="text-center text-white" />
+            <TitleText title={<>Our Workshop</>} textStyles="text-center text-white" />
             <div className="mt-[50px] flex flex-col gap-[30px]">
                 <motion.div
                     variants={fadeIn('right', 'spring', 0.5, 1)}
@@ -31,13 +31,13 @@ const Workshop = () => (
                         </div>
 
                         <h4 className="font-semibold lg:text-[32px] text-[24px] text-white py-5">
-                            Explore Full Stack Development and DevOps
+                            Explored Full Stack Development and DevOps
                         </h4>
-                        <p className="mt-[16px] font-normal lg:text-[20px] text-[16px] text-secondary-white py-4" style={{ letterSpacing: '0.05em' }}>
+                        {/* <p className="mt-[16px] font-normal lg:text-[20px] text-[16px] text-secondary-white py-4" style={{ letterSpacing: '0.05em' }}>
                             Join us for a 2-day workshop on Full Stack Development in association with <span className="text-blue-500 font-bold">Capgemini</span> on <b className='text-green-500'>October 9th and 10th</b>.
-                        </p>
+                        </p> */}
 
-                        <a
+                        {/* <a
                             href="https://forms.gle/2Ag5uiSMAPZxXLvA8"
                             className="bg-blue-600 text-white py-4 px-4 rounded-full text-sm hover:bg-blue-700 transition duration-300 flex items-center justify-center"
                             style={{ width: '180px', margin: '0 auto' }}
@@ -48,7 +48,7 @@ const Workshop = () => (
                             >
                                 Register Now
                             </motion.span>
-                        </a>
+                        </a> */}
                     </div>
                 </motion.div>
             </div>

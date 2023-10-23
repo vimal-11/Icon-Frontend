@@ -57,6 +57,10 @@ const Guidelines = () => (
                                 <GuidelineStep number="7" title="Secure Your Spot with a Payment">
                                     Don't miss out! Complete your event registration by making payments securely from your "MY PROFILE" page.
                                 </GuidelineStep>
+
+                                <GuidelineStep number="8" title="Registration Video">
+                                    <a href="https://www.instagram.com/p/Cyq1_OXBTP-/?igshid=YTUzYTFiZDMwYg==" className="text-blue">Click Here for Step by Step process for successful registrations.</a>
+                                </GuidelineStep>
                             </div>
                         </div>
                     </div>
